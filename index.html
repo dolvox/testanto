@@ -47,6 +47,8 @@
   .color-opt.active{border-color:#2a2118;transform:scale(1.08)}
   .color-opt.active::after{content:'';position:absolute;inset:-5px;border-radius:50%;border:1.5px solid #2a2118}
   .color-name{font-size:12px;color:#5a4f44;margin-top:-14px;margin-bottom:18px;height:16px;transition:opacity .3s}
+  .ar-btn{width:100%;background:linear-gradient(135deg,#ffffff,#f7f4f0);color:#1c2f50;border:2px solid #1c2f50;border-radius:10px;padding:16px;font-family:'DM Sans',sans-serif;font-size:13px;font-weight:700;letter-spacing:2px;text-transform:uppercase;cursor:pointer;transition:all .25s ease;margin-bottom:12px;box-shadow:0 8px 24px rgba(28,47,80,0.12)}
+  .ar-btn:hover{background:#1c2f50;color:#fff;transform:translateY(-2px)}
   .add-btn{width:100%;background:#1c2f50;color:#fff;border:none;border-radius:8px;padding:17px;font-family:'DM Sans',sans-serif;font-size:13px;font-weight:500;letter-spacing:2px;text-transform:uppercase;cursor:pointer;transition:background .2s,transform .1s;margin-bottom:10px}
   .add-btn:hover{background:#243d6a}
   .add-btn:active{transform:scale(0.99)}
@@ -103,6 +105,7 @@
       <div class="colors-row" id="colorsRow"></div>
       <div class="color-name" id="colorName">Rosa Madri</div>
 
+      <button class="ar-btn" id="arBtn">Ver em AR na sua casa</button>
       <button class="add-btn" id="addBtn" onclick="addCart()">Adicionar ao Carrinho</button>
       <div class="stock">Produto em estoque com <strong>envio imediato</strong></div>
 
@@ -135,30 +138,35 @@
       hex: '#e8b4aa',
       img: 'https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=700&q=80',
       bg: '#f5e8e5',
+      file: 'aparador-rosa.glb'
     },
     {
       name: 'Branco Off',
       hex: '#f0ece5',
       img: 'https://images.unsplash.com/photo-1493663284031-b7e3aefcae8e?w=700&q=80',
       bg: '#f5f3ef',
+      file: 'aparador-branco.glb'
     },
     {
       name: 'Cinza Nórdico',
       hex: '#8b9ba8',
       img: 'https://images.unsplash.com/photo-1567016432779-094069958ea5?w=700&q=80',
       bg: '#e8edf0',
+      file: 'aparador-cinza.glb'
     },
     {
       name: 'Carvão',
       hex: '#3a3a3a',
       img: 'https://images.unsplash.com/photo-1540574163026-643ea20ade25?w=700&q=80',
       bg: '#2e2e2e',
+      file: 'aparador-carvao.glb'
     },
     {
       name: 'Verde Sage',
       hex: '#8aac8e',
       img: 'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=700&q=80',
       bg: '#e3ede4',
+      file: 'aparador-verde.glb'
     },
   ];
 
@@ -220,6 +228,12 @@
       btn.textContent = orig;
       btn.style.background = '';
     }, 1800);
+  }
+
+  document.getElementById('arBtn').onclick = function() {
+    localStorage.setItem('corSelecionada', colors[current].name);
+    localStorage.setItem('arquivoModelo', colors[current].file);
+    window.open('https://dolvox.github.io/Aparador-Buffet-90cm-Retro/', '_blank');
   }
 
   buildThumbs();
