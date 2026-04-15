@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aparador Buffet 90cm Retrô MDF - ON Móveis</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:'DM Sans',sans-serif;background:#f7f4f0;color:#2a2118}
+  .page{max-width:1100px;margin:0 auto;padding:24px 16px 48px}
+  .breadcrumb{font-size:11px;color:#9a8f84;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:24px}
+  .breadcrumb span{color:#2a2118}
+  .product-grid{display:grid;grid-template-columns:72px 1fr 1fr;gap:20px;align-items:start}
+  @media(max-width:700px){
+    .product-grid{grid-template-columns:56px 1fr;}
+    .info{grid-column:1/-1}
+  }
+  .thumbs{display:flex;flex-direction:column;gap:10px}
+  .thumb{width:64px;height:64px;border-radius:6px;overflow:hidden;cursor:pointer;border:2px solid transparent;transition:border-color .2s;background:#ede8e2}
+  .thumb:hover,.thumb.active{border-color:#2a2118}
+  .thumb img{width:100%;height:100%;object-fit:cover}
+  .main-img-wrap{border-radius:14px;overflow:hidden;background:#f5e8e5;aspect-ratio:1/1;position:relative}
+  .main-img-wrap img{width:100%;height:100%;object-fit:cover;transition:opacity .45s}
+  .color-badge{position:absolute;bottom:14px;left:14px;background:rgba(255,255,255,0.9);border-radius:20px;padding:5px 12px;font-size:11px;letter-spacing:1.5px;text-transform:uppercase;font-weight:500;color:#2a2118;backdrop-filter:blur(4px)}
+  .info{padding:0 4px}
+  .brand{font-size:11px;letter-spacing:2.5px;text-transform:uppercase;color:#9a8f84;margin-bottom:8px}
+  .title{font-family:'Cormorant Garamond',serif;font-size:2rem;font-weight:600;line-height:1.2;margin-bottom:12px;color:#1c1510}
+  .stars{display:flex;align-items:center;gap:8px;margin-bottom:16px}
+  .star{color:#d4a843;font-size:15px}
+  .reviews{font-size:12px;color:#7a6f65;border-bottom:1px solid #c8b99a;padding-bottom:3px;cursor:pointer}
+  .badges{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px}
+  .badge{background:#1c2f50;color:#fff;font-size:10px;letter-spacing:1px;text-transform:uppercase;padding:6px 12px;border-radius:4px;font-weight:500}
+  .coupon{border:1px dashed #b8a88a;border-radius:6px;padding:9px 14px;font-size:12px;color:#5a4f44;margin-bottom:12px;background:#fdf9f5}
+  .coupon strong{color:#1c1510;letter-spacing:1px}
+  .save-tag{background:#e8f4e8;color:#2d6e2d;font-size:11px;font-weight:500;letter-spacing:.5px;padding:5px 12px;border-radius:4px;display:inline-block;margin-bottom:12px}
+  .price-wrap{margin-bottom:6px}
+  .price-main{font-family:'Cormorant Garamond',serif;font-size:2.2rem;font-weight:600;color:#1c1510}
+  .price-old{font-size:14px;color:#b0a397;text-decoration:line-through;margin-left:8px}
+  .installment{font-size:12px;color:#5a4f44;margin-bottom:4px}
+  .cashback{display:flex;align-items:center;gap:6px;font-size:12px;color:#5a7a3a;margin-bottom:18px}
+  .cashback-dot{width:10px;height:10px;border-radius:50%;background:#6aaa20}
+  .section-label{font-size:11px;letter-spacing:2px;text-transform:uppercase;color:#9a8f84;margin-bottom:10px;font-weight:500}
+  .colors-row{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:22px}
+  .color-opt{width:36px;height:36px;border-radius:50%;cursor:pointer;border:2.5px solid transparent;position:relative;transition:transform .2s,border-color .2s;outline:none}
+  .color-opt:hover{transform:scale(1.12)}
+  .color-opt.active{border-color:#2a2118;transform:scale(1.08)}
+  .color-opt.active::after{content:'';position:absolute;inset:-5px;border-radius:50%;border:1.5px solid #2a2118}
+  .color-name{font-size:12px;color:#5a4f44;margin-top:-14px;margin-bottom:18px;height:16px;transition:opacity .3s}
+  .add-btn{width:100%;background:#1c2f50;color:#fff;border:none;border-radius:8px;padding:17px;font-family:'DM Sans',sans-serif;font-size:13px;font-weight:500;letter-spacing:2px;text-transform:uppercase;cursor:pointer;transition:background .2s,transform .1s;margin-bottom:10px}
+  .add-btn:hover{background:#243d6a}
+  .add-btn:active{transform:scale(0.99)}
+  .stock{text-align:center;font-size:12px;color:#5a4f44;margin-bottom:20px}
+  .stock strong{color:#2a2118}
+  .feats{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;border-top:1px solid #e0d8cf;padding-top:20px}
+  .feat{text-align:center;padding:8px 4px}
+  .feat-icon{font-size:22px;margin-bottom:6px}
+  .feat-label{font-size:10px;color:#7a6f65;letter-spacing:.8px;text-transform:uppercase;line-height:1.4}
+</style>
+</head>
+<body>
+
+<div class="page">
+  <div class="breadcrumb">Móveis · Sala · Aparadores &rsaquo; <span>Aparador Buffet Rosa Madri</span></div>
+
+  <div class="product-grid">
+    <div class="thumbs" id="thumbs"></div>
+
+    <div class="main-img-wrap" id="mainWrap">
+      <img id="mainImg" src="" alt="Aparador Buffet">
+      <div class="color-badge" id="colorBadge">Rosa Madri</div>
+    </div>
+
+    <div class="info">
+      <div class="brand">ON Móveis</div>
+      <h1 class="title">Aparador Buffet<br>90cm Retrô MDF</h1>
+
+      <div class="stars">
+        <span class="star">★</span><span class="star">★</span><span class="star">★</span>
+        <span class="star">★</span><span class="star">★</span>
+        <span class="reviews">32 avaliações</span>
+      </div>
+
+      <div class="badges">
+        <span class="badge">✦ Garantia 5 Anos</span>
+        <span class="badge">◈ Fabricação Própria</span>
+      </div>
+
+      <div class="coupon">🏷 +10% OFF com cupom: <strong>ANIVERON10</strong></div>
+      <div class="save-tag">Economize R$&nbsp;152,80</div>
+
+      <div class="price-wrap">
+        <span class="price-main">R$&nbsp;462,98</span>
+        <span class="price-old">R$&nbsp;615,78</span>
+      </div>
+      <div class="installment">3× de <strong>R$&nbsp;154,33</strong> sem juros</div>
+      <div class="cashback">
+        <span class="cashback-dot"></span>
+        R$&nbsp;23,15 de volta na próxima compra
+      </div>
+
+      <div class="section-label">Escolha a cor</div>
+      <div class="colors-row" id="colorsRow"></div>
+      <div class="color-name" id="colorName">Rosa Madri</div>
+
+      <button class="add-btn" id="addBtn" onclick="addCart()">Adicionar ao Carrinho</button>
+      <div class="stock">Produto em estoque com <strong>envio imediato</strong></div>
+
+      <div class="feats">
+        <div class="feat">
+          <div class="feat-icon">🪵</div>
+          <div class="feat-label">100% MDF</div>
+        </div>
+        <div class="feat">
+          <div class="feat-icon">✦</div>
+          <div class="feat-label">Acabamento Alto Padrão</div>
+        </div>
+        <div class="feat">
+          <div class="feat-icon">🔨</div>
+          <div class="feat-label">Fabricação Própria</div>
+        </div>
+        <div class="feat">
+          <div class="feat-icon">🇧🇷</div>
+          <div class="feat-label">Feito no Brasil</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  const colors = [
+    {
+      name: 'Rosa Madri',
+      hex: '#e8b4aa',
+      img: 'https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=700&q=80',
+      bg: '#f5e8e5',
+    },
+    {
+      name: 'Branco Off',
+      hex: '#f0ece5',
+      img: 'https://images.unsplash.com/photo-1493663284031-b7e3aefcae8e?w=700&q=80',
+      bg: '#f5f3ef',
+    },
+    {
+      name: 'Cinza Nórdico',
+      hex: '#8b9ba8',
+      img: 'https://images.unsplash.com/photo-1567016432779-094069958ea5?w=700&q=80',
+      bg: '#e8edf0',
+    },
+    {
+      name: 'Carvão',
+      hex: '#3a3a3a',
+      img: 'https://images.unsplash.com/photo-1540574163026-643ea20ade25?w=700&q=80',
+      bg: '#2e2e2e',
+    },
+    {
+      name: 'Verde Sage',
+      hex: '#8aac8e',
+      img: 'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=700&q=80',
+      bg: '#e3ede4',
+    },
+  ];
+
+  let current = 0;
+
+  function buildThumbs() {
+    const cont = document.getElementById('thumbs');
+    colors.forEach((c, i) => {
+      const d = document.createElement('div');
+      d.className = 'thumb' + (i === 0 ? ' active' : '');
+      d.style.background = c.hex;
+      d.onclick = () => select(i);
+      cont.appendChild(d);
+    });
+  }
+
+  function buildColors() {
+    const row = document.getElementById('colorsRow');
+    colors.forEach((c, i) => {
+      const btn = document.createElement('button');
+      btn.className = 'color-opt' + (i === 0 ? ' active' : '');
+      btn.style.background = c.hex;
+      btn.title = c.name;
+      btn.onclick = () => select(i);
+      row.appendChild(btn);
+    });
+  }
+
+  function select(i) {
+    current = i;
+    const c = colors[i];
+
+    const img = document.getElementById('mainImg');
+    img.style.opacity = '0';
+    setTimeout(() => {
+      img.src = c.img;
+      img.style.opacity = '1';
+    }, 220);
+
+    document.getElementById('mainWrap').style.background = c.bg;
+    document.getElementById('colorBadge').textContent = c.name;
+    document.getElementById('colorName').textContent = c.name;
+
+    document.querySelectorAll('.thumb').forEach((t, idx) => {
+      t.classList.toggle('active', idx === i);
+      t.style.background = colors[idx].hex;
+    });
+    document.querySelectorAll('.color-opt').forEach((b, idx) => {
+      b.classList.toggle('active', idx === i);
+    });
+  }
+
+  function addCart() {
+    const btn = document.getElementById('addBtn');
+    const orig = btn.textContent;
+    btn.textContent = '✓ Adicionado!';
+    btn.style.background = '#2d6e2d';
+    setTimeout(() => {
+      btn.textContent = orig;
+      btn.style.background = '';
+    }, 1800);
+  }
+
+  buildThumbs();
+  buildColors();
+  select(0);
+</script>
+
+</body>
+</html>
